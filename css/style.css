@@ -1,0 +1,191 @@
+header {
+  background: #000;
+  height: 85px;
+  font-weight: bold;
+  z-index: 100;
+}
+
+.header {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__logo {
+  width: 200px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.header__nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.header__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 550px;
+  margin: 0;
+  padding: 0;
+}
+.header__nav ul li {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.header__nav ul li a {
+  color: #fff;
+}
+
+.hamburger {
+  position: absolute;
+  display: none;
+  right: 20px;
+  width: 50px;
+  height: 40px;
+}
+.hamburger span {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: #fff;
+  border-radius: 50px;
+}
+.hamburger span::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: #fff;
+  border-radius: 50px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.hamburger span::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: #fff;
+  border-radius: 50px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+.hamburger_active span {
+  background: rgba(0, 0, 0, 0);
+}
+.hamburger_active span::before {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  top: 0;
+}
+.hamburger_active span::after {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  top: 0;
+}
+
+body {
+  font-family: 'Proxima Nova';
+  font-weight: 400;
+  height: 1200px;
+  background: url("../img/background/halo4.jpg") center center/cover no-repeat;
+}
+
+.container {
+  max-width: 961px;
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 10px 0 10px;
+  }
+
+  .header__nav ul {
+    width: 490px;
+  }
+  .header__nav ul li {
+    font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .header {
+    position: relative;
+  }
+  .header__nav {
+    z-index: -10;
+    position: absolute;
+    left: 0;
+    top: -200%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    height: 250px;
+    -webkit-transition: top .5s;
+    transition: top .5s;
+  }
+  .header__nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .header__nav ul li {
+    position: relative;
+    padding-left: 10px;
+  }
+  .header__nav ul li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-90%);
+            transform: translateY(-90%);
+    width: 5px;
+    height: 5px;
+    background: #d13f4a;
+    border-radius: 50%;
+  }
+  .header__nav_active {
+    top: 85px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
