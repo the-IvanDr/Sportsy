@@ -60,7 +60,7 @@
                         transform: translateY(-90%);
                         width: 5px;
                         height: 5px;
-                        background: #d13f4a;
+                        background: $red;
                         border-radius: 50%;
                     }
                 }
@@ -69,6 +69,37 @@
             &_active {
                 top: 85px;
             }
+        }
+    }
+
+    .welcome{
+        width: 488px;
+        &__top{
+            font-size: 12px;
+            width: 100px;
+            height: 25px;
+        }
+
+        &__title{
+            font-size: 23px;
+        }
+    }
+}
+
+@media (max-width: 575px) { 
+    .welcome{
+        width: 100%;
+        margin-top: 100px;
+        &__title{
+            font-size: 20px;
+            text-align: center;
+        }
+
+        &__bottom{
+            font-size: 14px;
+            width: 90%;
+            text-align: center;
+            height: 45px;
         }
     }
 }

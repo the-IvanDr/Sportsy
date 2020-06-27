@@ -1,16 +1,33 @@
+@import "variables";
+
 @import "header";
 @import "hamburger";
+
+@import "welcome";
+
+@import "main";
+@import "main-article";
+
+@import "pagination";
+
+@import "aside";
 
 body{
     font-family: 'Proxima Nova';
     font-weight: 400;
-    height: 1200px;
     background: url('../img/background/halo4.jpg') center (center/cover) no-repeat;
 }
 
 .container{
     max-width: 961px;
     margin: 0 auto;
+}
+
+.main-wrapper{
+    margin-top: 145px;
+    display: flex;
+    width: 100%;
+    
 }
 
 
