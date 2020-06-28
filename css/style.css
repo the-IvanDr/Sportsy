@@ -195,6 +195,7 @@ header {
   background: #ffffff;
   width: 670px;
   padding: 10px;
+  padding-bottom: 20px;
 }
 .main__header {
   height: 47px;
@@ -639,6 +640,75 @@ body {
   .header__nav ul li {
     font-size: 15px;
   }
+
+  .main-wrapper {
+    margin: 0 auto;
+    margin-top: 145px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .main {
+    width: 500px;
+  }
+
+  .aside {
+    width: 290px;
+  }
+}
+@media (max-width: 810px) {
+  .main-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .main {
+    width: 670px;
+  }
+
+  .aside {
+    width: 670px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .aside__sponsors {
+    width: 40%;
+  }
+  .aside__latest-video {
+    width: 58%;
+  }
+  .aside__divisions {
+    width: 40%;
+  }
+  .aside__we-recommend {
+    width: 58%;
+    margin-top: 0;
+  }
+  .aside__gallery {
+    width: 100%;
+  }
+  .aside__gallery img {
+    margin-bottom: 10px;
+  }
+  .aside__current-streams {
+    width: 40%;
+  }
+  .aside__from-twitter {
+    width: 58%;
+  }
 }
 @media (max-width: 767px) {
   .hamburger {
@@ -701,6 +771,32 @@ body {
   .welcome__title {
     font-size: 23px;
   }
+
+  .main, .aside {
+    width: 100%;
+  }
+
+  .main__article__date::after {
+    right: -14px;
+  }
+  .main__article__aside {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .aside__latest-video__preview img {
+    width: 100%;
+  }
+  .aside__sponsors ul li {
+    font-size: 12px;
+  }
+  .aside__current-streams__info__who {
+    font-size: 11px;
+  }
+  .aside__current-streams__info__game {
+    font-size: 10px;
+  }
 }
 @media (max-width: 575px) {
   .welcome {
@@ -716,6 +812,59 @@ body {
     width: 90%;
     text-align: center;
     height: 45px;
+  }
+
+  .main__article__image img {
+    -webkit-transform: translateX(-13%);
+            transform: translateX(-13%);
+  }
+
+  .aside__title {
+    font-size: 14px;
+  }
+  .aside__sponsors {
+    width: 100%;
+  }
+  .aside__latest-video {
+    width: 100%;
+  }
+  .aside__divisions {
+    width: 100%;
+  }
+  .aside__divisions h4 {
+    font-size: 13px !important;
+  }
+  .aside__we-recommend {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .aside__we-recommend__item {
+    height: auto;
+  }
+  .aside__we-recommend__item img {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .aside__gallery__items {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .aside__gallery img {
+    display: block;
+    margin-right: 5px;
+  }
+  .aside__divisions ul li div h4 {
+    font-size: 10px;
+  }
+  .aside__current-streams {
+    width: 100%;
+  }
+  .aside__current-streams__preview {
+    height: 125px;
+  }
+  .aside__from-twitter {
+    width: 100%;
   }
 }
 
