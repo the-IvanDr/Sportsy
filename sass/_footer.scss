@@ -1,0 +1,26 @@
+.footer{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 500px;
+    background: rgba(0, 0, 0, .9);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+
+    &__rights{
+        font-weight: 300;
+        p{
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    &__behance{
+        margin-top: 10px;
+        text-align: center;
+        font-weight: 300;
+    }
+}
